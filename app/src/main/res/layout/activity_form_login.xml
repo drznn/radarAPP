@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FormLogin">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/radarapp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:id="@+id/loginComponents"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_margin="40dp"
+        />
+
+    <EditText
+        android:id="@+id/login_user"
+        style="@style/Edit_Text_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_user"
+        android:hint="Digite seu usuário"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="@id/loginComponents"
+        app:layout_constraintStart_toStartOf="@id/loginComponents"
+        app:layout_constraintTop_toTopOf="@id/loginComponents" />
+
+    <EditText
+        android:id="@+id/login_senha"
+        style="@style/Edit_Text_login"
+        android:hint="Digite sua senha"
+        android:drawableRight="@drawable/ic_senha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@id/loginComponents"
+        app:layout_constraintEnd_toEndOf="@id/loginComponents"
+        app:layout_constraintTop_toBottomOf="@+id/login_user"
+        android:padding="20dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_senha"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
