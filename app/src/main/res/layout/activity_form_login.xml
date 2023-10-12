@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,15 +20,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <TextView
+        android:text="Test"
+        android:textAllCaps="false"
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
     <View
         android:id="@+id/loginComponents"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        android:layout_margin="40dp"
+        app:layout_constraintTop_toBottomOf="@id/loginText"
+        android:layout_margin="20dp"
         />
 
     <EditText
@@ -34,9 +48,10 @@
         style="@style/Edit_Text_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/edit_text_login"
         android:drawableRight="@drawable/ic_user"
         android:hint="Digite seu usuário"
+        android:inputType="textEmailAddress"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="@id/loginComponents"
         app:layout_constraintStart_toStartOf="@id/loginComponents"
@@ -47,17 +62,19 @@
         style="@style/Edit_Text_login"
         android:hint="Digite sua senha"
         android:drawableRight="@drawable/ic_senha"
+        android:inputType="numberPassword"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/edit_text_login"
         app:layout_constraintStart_toStartOf="@id/loginComponents"
         app:layout_constraintEnd_toEndOf="@id/loginComponents"
         app:layout_constraintTop_toBottomOf="@+id/login_user"
         android:padding="20dp"
         />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_button"
-        android:text="Entrar"
+        android:text="@string/entrar"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -72,4 +89,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_senha"
         />
+    <ProgressBar
+        android:id="@+id/progressbar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
+        />
+    <TextView
+        android:id="@+id/text_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cadastro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/progressbar_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

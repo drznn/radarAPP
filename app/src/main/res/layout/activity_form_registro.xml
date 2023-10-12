@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormRegistro">
+]
+    <ImageView
+        android:id="@+id/logo_registro"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/radarapp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/title_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_registro"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_registro"
+        />
+
+    <View
+        android:id="@+id/registro_components"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_registro"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/user_registro"
+        style="@style/Edit_Text_login"
+        app:layout_constraintTop_toTopOf="@id/registro_components"
+        app:layout_constraintStart_toStartOf="@id/registro_components"
+        app:layout_constraintEnd_toEndOf="@id/registro_components"
+        android:drawableRight="@drawable/ic_user"
+        android:hint="Digite seu usuário"
+        android:inputType="text"
+        android:background="@drawable/edit_text_login"
+        android:padding="20dp"
+        />
+
+    <EditText
+        android:id="@+id/email_registro"
+        style="@style/Edit_Text_login"
+        app:layout_constraintTop_toBottomOf="@id/user_registro"
+        app:layout_constraintStart_toStartOf="@id/registro_components"
+        app:layout_constraintEnd_toEndOf="@id/registro_components"
+        android:drawableRight="@drawable/ic_email"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edit_text_login"
+        android:padding="20dp"
+        />
+
+    <EditText
+        android:id="@+id/senha_registro"
+        style="@style/Edit_Text_login"
+        app:layout_constraintTop_toBottomOf="@id/email_registro"
+        app:layout_constraintStart_toStartOf="@id/registro_components"
+        app:layout_constraintEnd_toEndOf="@id/registro_components"
+        android:drawableRight="@drawable/ic_senha"
+        android:hint="Digite sua senha"
+        android:inputType="numberPassword"
+        android:background="@drawable/edit_text_login"
+        android:padding="20dp"
+        />
+
+    <EditText
+        android:id="@+id/confirma_senha_registro"
+        style="@style/Edit_Text_login"
+        app:layout_constraintTop_toBottomOf="@id/senha_registro"
+        app:layout_constraintStart_toStartOf="@id/registro_components"
+        app:layout_constraintEnd_toEndOf="@id/registro_components"
+        android:drawableRight="@drawable/ic_senha"
+        android:hint="Confirme sua senha"
+        android:inputType="numberPassword"
+        android:background="@drawable/edit_text_login"
+        android:padding="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registrar_button"
+        android:text="@string/criar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirma_senha_registro"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
