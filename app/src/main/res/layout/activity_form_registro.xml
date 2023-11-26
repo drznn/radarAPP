@@ -82,7 +82,7 @@
         android:padding="20dp"
         />
 
-    <EditText
+   <!-- <EditText
         android:id="@+id/confirma_senha_registro"
         style="@style/Edit_Text_login"
         app:layout_constraintTop_toBottomOf="@id/senha_registro"
@@ -93,7 +93,7 @@
         android:inputType="numberPassword"
         android:background="@drawable/edit_text_login"
         android:padding="20dp"
-        />
+        /> -->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registrar_button"
@@ -110,7 +110,7 @@
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirma_senha_registro"
+        app:layout_constraintTop_toBottomOf="@+id/senha_registro"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
