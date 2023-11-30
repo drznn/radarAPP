@@ -26,6 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class FormRegistro extends AppCompatActivity {
 
@@ -54,8 +55,6 @@ public class FormRegistro extends AppCompatActivity {
                     snackbar.show();
                 }else{
                     CadastrarUsuario(v);
-                    Intent intent = new Intent(FormRegistro.this, TelaEventos.class);
-                    startActivity(intent);
                 }
             }
         });
@@ -124,8 +123,6 @@ public class FormRegistro extends AppCompatActivity {
         edit_email = findViewById(R.id.email_registro);
         edit_senha = findViewById(R.id.senha_registro);
         bt_registro = findViewById(R.id.registrar_button);
-
     }
-
 
 }
