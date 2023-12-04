@@ -4,6 +4,15 @@ public class Event {
     int imgEvento;
     String nomeEvento;
     String descricaoEvento;
+    String data;
+
+    public Event(int imgEvento, String nomeEvento, String descricaoEvento, String data) {
+        this.imgEvento = imgEvento;
+        this.nomeEvento = nomeEvento;
+        this.descricaoEvento = descricaoEvento;
+        this.data = data;
+    }
+
 
     public int getImgEvento() {
         return imgEvento;
@@ -27,5 +36,13 @@ public class Event {
 
     public void setDescricaoEvento(String descricaoEvento) {
         this.descricaoEvento = descricaoEvento;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 }

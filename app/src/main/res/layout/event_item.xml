@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imagemEvent"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mysterious 2023 Fortaleza"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toEndOf="@+id/containerImg"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtEventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chegamos ao momento em que a linha tênue entre passado, presente e futuro irá se formar e podemos desfrutar do que mais esperávamos. Sensações, memórias e MYSTERIOUS"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/containerImg"
+        app:layout_constraintTop_toBottomOf="@+id/txtEventName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02/12/23"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@+id/containerImg"
+        app:layout_constraintTop_toBottomOf="@id/txtEventDescription"/>
+
+    <Button
+        android:id="@+id/btLike"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Like"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtEventDescription"
+        app:layout_constraintStart_toEndOf="@id/txtData"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btLike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
